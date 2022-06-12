@@ -1,5 +1,8 @@
 package Internal.Entities;
 
+/**
+ * A class that represents an actual card with a suite and a value
+ */
 public class Card {
   // fields cannot be changed
   private final String value;
@@ -11,11 +14,12 @@ public class Card {
     this.suite = suite;
   }
 
-  // Observers
+  // Gets the value of the card
   public String getValue() {
     return value;
   } 
 
+  // Gets the suite of the card
   public String getSuite() {
     return suite;
   }

@@ -5,11 +5,15 @@ import Internal.Interfaces.Humans;
 
 import java.util.*;
 
+/**
+ * A class representing the players of a BlackJack game
+ */
 public class Player implements Humans {
   private Deck deck;
   private Hand hand;
-  private boolean hasStood;
+  private boolean hasStood; // flag for a stand
 
+  // Constructor
   public Player(Deck deck) {
     this.deck = deck;
     hand = new Hand();
@@ -34,10 +38,12 @@ public class Player implements Humans {
     hand.put(deck.getRandomCard());
   }
 
+  // Sets the flag to true
   public void stand() {
     hasStood = true;
   }
   
+  // Checks if the player has stood or not
   public boolean hasStood() {
     return hasStood;
   }

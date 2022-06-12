@@ -2,10 +2,15 @@ package Internal.Constants;
 
 import java.util.*;
 
+/**
+ * Class to hold constants regarding a person's hand filled
+ * with cards
+ */
 public class HandConstants {
-  public static final int TWENTY_ONE = 21;
+  // Alternate value for an Ace
   public static final int ACE_ELEVEN = 11;
 
+  // Maps a card's value with it's blackjack value
   public static final Map<String, Integer> VALUES_TO_INT = new HashMap<>() {{
     put("Ace", 1);
     put("Two", 2);
