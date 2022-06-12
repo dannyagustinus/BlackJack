@@ -1,4 +1,4 @@
-package internal;
+package Internal.Entities;
 
 public class Card {
   // fields cannot be changed

@@ -1,33 +1,10 @@
-package internal;
+package Internal.Constants;
 
 import java.util.*;
 
-public class Constants {
+public class HandConstants {
   public static final int TWENTY_ONE = 21;
   public static final int ACE_ELEVEN = 11;
-
-  public static final List<String> VALUES = new ArrayList<>(Arrays.asList(
-    "Ace",
-    "Two",
-    "Three",
-    "Four",
-    "Five",
-    "Six",
-    "Seven",
-    "Eight",
-    "Nine",
-    "Ten",
-    "Jack",
-    "Queen",
-    "King"
-  ));
-  
-  public static final List<String> SUITES = new ArrayList<>(Arrays.asList(
-    "Diamonds",
-    "Clubs",
-    "Hearts",
-    "Spades"
-  ));
 
   public static final Map<String, Integer> VALUES_TO_INT = new HashMap<>() {{
     put("Ace", 1);
