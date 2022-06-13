@@ -38,6 +38,8 @@ public class Hand {
       // Avoids the Aces to be counted for later
       if (!card.getValue().equals("Ace")) {
         sum += HandConstants.VALUES_TO_INT.get(card.getValue());
+      } else {
+        aces++;
       }
     }
 
