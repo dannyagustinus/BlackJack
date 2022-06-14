@@ -18,7 +18,7 @@ public class Dealer implements Humans{
     this.deck = deck;
     hand = new Hand();
     hiddenCard = deck.getRandomCard();
-    hand.put(hiddenCard);
+    hand.put(new Card(hiddenCard.getValue(), hiddenCard.getSuite()));
     hand.put(deck.getRandomCard());
   }
 
@@ -38,15 +38,19 @@ public class Dealer implements Humans{
       }
     }
 
-    // Makes the hidden card visible for next rounds
-    if (hiddenCard.getSuite() != "" && hiddenCard.getValue() != "") {
-      hiddenCard = new Card("", "");
-    }
+    unhide();
 
     return res;
   }
 
   public void hit() {
     hand.put(deck.getRandomCard());
+  }
+
+  // Makes the hidden card visible for next rounds
+  private void unhide() {
+    if (hiddenCard.getSuite() != "" && hiddenCard.getValue() != "") {
+      hiddenCard = new Card("", "");
+    }
   }
 }

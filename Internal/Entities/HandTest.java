@@ -8,8 +8,8 @@ import org.junit.*;
 import org.junit.rules.*;
 
 public class HandTest {
-  // @Rule
-  // public Timeout globalTimeout = Timeout.seconds(2);
+  @Rule
+  public Timeout globalTimeout = Timeout.seconds(2);
 
   private static Hand blackjack;
   private static Hand noAces;
