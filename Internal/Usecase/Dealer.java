@@ -11,7 +11,7 @@ import java.util.*;
 public class Dealer implements Humans{
   private static Card hiddenCard; // The hidden card at the first round
   private static Hand hand;
-  private Deck deck;
+  private final Deck deck;
 
   // Constructor
   public Dealer(Deck deck) {
@@ -30,8 +30,7 @@ public class Dealer implements Humans{
     List<Card> res = new ArrayList<>();
     for (Card card : hand.getCards()) {
       // Don't show the hidden card
-      if (card.getSuite() == hiddenCard.getSuite() &&
-          card.getValue() == hiddenCard.getValue()) {
+      if (Objects.equals(card.getSuite(), hiddenCard.getSuite()) && Objects.equals(card.getValue(), hiddenCard.getValue())) {
         res.add(new Card("", ""));
       } else {
         res.add(new Card(card.getValue(), card.getSuite()));
@@ -49,7 +48,7 @@ public class Dealer implements Humans{
 
   // Makes the hidden card visible for next rounds
   private void unhide() {
-    if (hiddenCard.getSuite() != "" && hiddenCard.getValue() != "") {
+    if (!Objects.equals(hiddenCard.getSuite(), "") && !Objects.equals(hiddenCard.getValue(), "")) {
       hiddenCard = new Card("", "");
     }
   }

@@ -9,11 +9,11 @@ import java.util.*;
  */
 public interface Humans {
   // Gets the value of the human's hand
-  public int getTotal();
+  int getTotal();
 
   // Gets the cards within the human's hand
-  public List<Card> showHand();
+  List<Card> showHand();
 
   // Performs a hit
-  public void hit();
+  void hit();
 }

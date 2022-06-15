@@ -3,9 +3,8 @@ package Internal.Entities;
 import org.junit.*;
 import org.junit.rules.*;
 
-import static org.junit.Assert.assertTrue;
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.*;
 import Internal.Constants.*;
@@ -60,13 +59,13 @@ public class CardTest {
   /** Checks for equality between two cards**/
   @Test
   public void testEquals() {
-    assertFalse(deck.get(0).equals(null));
-    assertFalse(deck.get(0).equals(new Card("Ten", "Hearts")));
-    assertFalse(deck.get(0).equals(new Card("Ace", "Hearts")));
-    assertFalse(deck.get(0).equals(new Card("Ten", "Diamonds")));
+    assertNotEquals(null, deck.get(0));
+    assertNotEquals(deck.get(0), new Card("Ten", "Hearts"));
+    assertNotEquals(deck.get(0), new Card("Ace", "Hearts"));
+    assertNotEquals(deck.get(0), new Card("Ten", "Diamonds"));
 
-    assertTrue(deck.get(0).equals(deck.get(0)));
-    assertTrue(deck.get(0).equals(new Card("Ace", "Diamonds")));
+    assertEquals(deck.get(0), deck.get(0));
+    assertEquals(deck.get(0), new Card("Ace", "Diamonds"));
   }
 
   /** Checks for equality of hashcodes between two cards**/

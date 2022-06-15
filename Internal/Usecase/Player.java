@@ -9,8 +9,8 @@ import java.util.*;
  * A class representing the players of a BlackJack game
  */
 public class Player implements Humans {
-  private Deck deck;
-  private Hand hand;
+  private final Deck deck;
+  private final Hand hand;
   private boolean hasStood; // flag for a stand
 
   // Constructor

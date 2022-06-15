@@ -24,16 +24,16 @@ public class PlayerTest {
   @Test
   public void testShowHand() {
     player = new Player(deck);
-    assertTrue(player.showHand().size() == 2);
+    assertEquals(2, player.showHand().size());
   }
 
   /** Player hits **/
   @Test
   public void testHit() {
     player = new Player(deck);
-    assertTrue(player.showHand().size() == 2);
+    assertEquals(2, player.showHand().size());
     player.hit();
-    assertTrue(player.showHand().size() == 3);
+    assertEquals(3, player.showHand().size());
   }
 
   /** Player stands **/

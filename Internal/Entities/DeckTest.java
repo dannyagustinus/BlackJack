@@ -1,5 +1,6 @@
 package Internal.Entities;
 
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.*;
@@ -27,7 +28,7 @@ public class DeckTest {
     // Checks if we're getting different cards each time
     for (int i = 0; i < 52; i++) {
       Card card = deck.getRandomCard();
-      assertTrue(!temp.contains(card));
+      assertFalse(temp.contains(card));
       temp.add(card);
     }
 

@@ -24,7 +24,7 @@ public class DealerTest {
   public void testShowHand() {
     dealer = new Dealer(deck);
     assertTrue(dealer.showHand().contains(new Card("", "")));
-    assertTrue(dealer.showHand().size() == 2);
+    assertEquals(2, dealer.showHand().size());
     assertFalse(dealer.showHand().contains(new Card("", "")));
   }
 
@@ -33,6 +33,6 @@ public class DealerTest {
   public void testHit() {
     dealer = new Dealer(deck);
     dealer.hit();
-    assertTrue(dealer.showHand().size() == 3);
+    assertEquals(3, dealer.showHand().size());
   }
 }

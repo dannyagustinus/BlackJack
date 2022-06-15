@@ -9,12 +9,11 @@ import java.util.*;
  * A class representing the game of BlackJack
  */
 public class Game {
-  private static Deck deck;
   private static Dealer dealer;
   private static List<Player> players; // Could be multiple players
 
   public Game() {
-    deck = new Deck();
+    Deck deck = new Deck();
     dealer = new Dealer(deck);
     players = new ArrayList<>();
     players.add(new Player(deck));

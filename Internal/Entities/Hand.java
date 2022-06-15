@@ -9,7 +9,7 @@ import Internal.Constants.HandConstants;
  * A class that respresents a hand containing cards
  */
 public class Hand {
-  private List<Card> cards;
+  private final List<Card> cards;
   
   // Constructor
   public Hand() {
